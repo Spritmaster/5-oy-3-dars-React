@@ -27,10 +27,8 @@ let rep =document.querySelector(".replay").addEventListener("click" ,()=>{
         }
     }, 1000);
 })
-setInterval(()=>{
-    box.style.display="flex"
-},1000)
 
+allWorks()
 
 
 let ball=0
