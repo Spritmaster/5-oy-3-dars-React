@@ -6,10 +6,32 @@
     <title>Lesson 3</title>
     <link rel="stylesheet" href="./main.css">
 </head>
-<body>
-    
-   <!-- <div class="game__start">Start</div> -->
+<body class="start__fon">
+    <!-- User info -->
+   <div class="game__start">
+    <h1 class="start__title">Wellcom "Find Word Game"</h1>
 
+    <form action="" class="user__info">
+    <label for="name">Ism</label>
+    <input class="ism" type="text" placeholder="Nodirbek" id="name" required    >
+    <label for="familya">Familya</label>
+    <input class="familya" type="text" placeholder="Ergashov" id="familya" required>
+    </form>
+
+    <button class="next">Next</button>
+
+
+   </div>
+
+    <!-- choose level-->
+    <div class="choose__level none">
+        <h1>choose a difficulty level</h1>
+       <div class="level">
+        <div class="easy">easy</div>
+        <div class="medium">mediem</div>
+        <div class="hard">hard</div>
+       </div>
+    </div>
         <div class="display__box ">
 
         
@@ -31,7 +53,7 @@
             <div class="modal__box">
                 <h1>GAME OVER</h1>
 
-                <h3></h2>
+                <h3 class="user"></h2>
 
                 <p class="short__info"></p>
 

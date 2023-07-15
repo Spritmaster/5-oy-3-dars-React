@@ -21,7 +21,35 @@ body {
   letter-spacing: 2px;
   font-size: 3rem;
 }
-
+input{
+    outline: none;
+    border: none;
+}
+.start__fon{
+    background: url(./images/fon.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.user__info{
+    display: flex;
+    flex-direction: column;
+}
+.user__info label{
+    font-size: 3rem;
+    font-weight: 700;
+}
+.user__info input{
+    width: 70%;
+    font-size: 3rem;
+    padding: 1rem;
+    border: 3px solid #111;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+}
+.user__info input::placeholder{
+    color: #000;
+}
 .ranWord{
     text-align: center;
     margin-top: 2.5rem;
@@ -29,7 +57,7 @@ body {
 
 .display__box{
 
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 50rem;
     height: 50rem;
@@ -37,11 +65,47 @@ body {
     background:linear-gradient(25deg, #7effc5,#ead535);
     border-radius: 10px;
 }
+.game__start{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.start__title{
+    font-size: 4rem;
+    margin: 2rem 0 3rem 0;
+    display:flex;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(to right, #0cf40c, #ff0000,   #0bffb6, #1cf0ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.next{
+    margin: 2rem auto;
+    width: 10rem;
+    padding: 1rem;
+    font-size: 3rem;
+    color: #fff;
+    background-color: #ff0000;
+    cursor: pointer;
+    border: 1px solid #ff0000;
+    border-radius: 2px;
+}
+.next:hover{
+    color: #ff0000;
+    background-color: #fff;
+}
+.next:active{
+    color: #fff;
+    background-color: #ff0000;
+    opacity: 0.6;
+}
 .input__word{
     width: 80%;
     margin: 2rem auto 23rem auto;
-    outline: none;
-    border: none;
     padding: 2rem;
     font-size: 3rem;
     font-weight: 500;
@@ -56,6 +120,55 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.choose__level{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+.level__fon{
+    background: url(./images/level__fon.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.choose__level  h1{
+text-transform: uppercase;
+color: #fff;
+}
+.level{
+    display: flex;
+    gap: 3rem;
+}
+.level div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    color: #fff;
+    border-radius: 50%;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.level div:hover{
+    opacity: 0.8;
+}
+.level div:active{
+    opacity: 0.6;
+}
+.easy{
+    background-color: rgba(12, 244, 12, 0.8);
+    backdrop-filter: blur(5px);
+}
+.medium{
+    background-color: rgba(234, 213, 53, 0.8);
+    backdrop-filter: blur(5px);
+}
+.hard{
+    background-color: rgba(255, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
 }
 .gameOver{
     display: none;
