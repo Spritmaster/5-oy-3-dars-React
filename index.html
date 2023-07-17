@@ -7,24 +7,57 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body class="start__fon">
-    <!-- User info -->
-   <div class="game__start">
-    <h1 class="start__title">Wellcom "Find Word Game"</h1>
 
-    <form action="" class="user__info">
-    <label for="name">Ism</label>
-    <input class="ism" type="text" placeholder="Nodirbek" id="name" required    >
-    <label for="familya">Familya</label>
-    <input class="familya" type="text" placeholder="Ergashov" id="familya" required>
+    <div class="header">
+       <div class="logo">
+        <a href="index.html">
+            <img src="./images/png/NB-compony-1.png" alt="" width="40">
+        </a>
+        <span>logo</span>
+       </div>
+
+       <div class="userTablet">
+        Users
+        <img src="./images/icons8-bookmark.gif" alt=""width="40">
+       </div>
+    </div>
+    <!-- User info -->
+   <div class="register">
+    <h1 class="register__title">Registration</h1>
+
+    <form action="#" class="user__info">
+
+        <div class="input-box">
+            <span class="icon"><img src="./images/png/human.png" alt="" width="25"></span>
+            <input class="ism" type="text"  id="name" required    >
+            <label for="name">Username</label>
+        </div>
+        <div class="input-box">
+            <span class="icon"><img src="./images/png/eye.png" alt="" width="25"></span>
+            <input class="password"  type="password" required    >
+            <label for="parol">password</label>   
+        </div>
+    
+        <div class="input-box">
+            <span class="icon"><img src="./images/png/email.png" alt="" width="25"></span>
+            <input  class="email" type="email"     >
+            <label for="email">Email</label>   
+        </div>
+
+       
+
+
+        <button class="next">Next</button>
+
     </form>
 
-    <button class="next">Next</button>
+    
 
 
    </div>
 
     <!-- choose level-->
-    <div class="choose__level none">
+    <div class="choose__level ">
         <h1>choose a difficulty level</h1>
        <div class="level">
         <div class="easy">easy</div>
@@ -32,12 +65,18 @@
         <div class="hard">hard</div>
        </div>
     </div>
+
+    <!-- teskari sanoq -->
+    <div class="start-game">
+        <h2 class="trt">5</h2>
+    </div>
+    <audio id="sau" src="./images/race-start-beeps-125125.mp3"></audio>
         <div class="display__box ">
 
         
 
             <h1 class="ranWord" ></h1>
-            <input class="input__word" type="text" d>
+            <input class="input__word" type="text">
 
 
            

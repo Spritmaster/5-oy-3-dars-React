@@ -19,44 +19,158 @@ body {
   justify-content: center;
   font-family: 'Inter', sans-serif;
   letter-spacing: 2px;
-  font-size: 3rem;
+  font-size: 1.8rem;
 }
-input{
-    outline: none;
-    border: none;
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    background:transparent;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 30px rgb(254, 9, 9);
+    padding:1rem 3rem;
 }
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.logo span{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+.userTablet{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* body uchun rasmlar */
+
 .start__fon{
-    background: url(./images/fon.jpg);
+    background: url(./images/jpg/register-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
+.level__fon{
+    background: url(./images/jpg/level__fon.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.play-fon{
+    background: url(./images/word-Tablet.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+/* body uchun rasmlar tugadi*/
+input{
+    outline: none;
+    border: none;
+}
+
+/* registration */
+.register{
+    width: 40rem;
+    height: 44rem;
+    border: 2px solid rgba(255, 255, 255, .5);
+    background: transparent;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0, 0.5);
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column      ;
+}
 .user__info{
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
-.user__info label{
-    font-size: 3rem;
-    font-weight: 700;
+
+.register__title{
+    font-size: 2.5rem;
+    text-align: center;
 }
-.user__info input{
-    width: 70%;
-    font-size: 3rem;
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 5rem;
+    border-bottom: 2px solid #162938;
+    margin: 2rem 0;
+}
+
+.input-box input:focus~label, 
+.input-box  input:valid~label{
+    top: -5px;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    font-weight: 600;
+    pointer-events: none;
+    transform: .5s;
+}
+
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    padding-right: 5rem;
+    background: transparent !important;
+    font-size: 1.8rem;
+}
+
+.input-box span{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 5.7rem;
+}
+.next{
+    width: 100%;
     padding: 1rem;
-    border: 3px solid #111;
-    border-radius: 4px;
-    margin-bottom: 2rem;
+    font-size: 3rem;
+    color: #fff;
+    background: #162938;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    outline: none;
 }
-.user__info input::placeholder{
-    color: #000;
+.next:hover{
+    opacity: 0.8;
 }
+.next:active{
+    opacity: 0.6;
+}
+
+
+
+
 .ranWord{
     text-align: center;
     margin-top: 2.5rem;
 }
 
 .display__box{
-
     display: none;
     flex-direction: column;
     width: 50rem;
@@ -65,44 +179,8 @@ input{
     background:linear-gradient(25deg, #7effc5,#ead535);
     border-radius: 10px;
 }
-.game__start{
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: 10px;
-}
 
-.start__title{
-    font-size: 4rem;
-    margin: 2rem 0 3rem 0;
-    display:flex;
-    align-items: center;
-    gap: 1rem;
-    background: linear-gradient(to right, #0cf40c, #ff0000,   #0bffb6, #1cf0ff);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-}
-.next{
-    margin: 2rem auto;
-    width: 10rem;
-    padding: 1rem;
-    font-size: 3rem;
-    color: #fff;
-    background-color: #ff0000;
-    cursor: pointer;
-    border: 1px solid #ff0000;
-    border-radius: 2px;
-}
-.next:hover{
-    color: #ff0000;
-    background-color: #fff;
-}
-.next:active{
-    color: #fff;
-    background-color: #ff0000;
-    opacity: 0.6;
-}
+
 .input__word{
     width: 80%;
     margin: 2rem auto 23rem auto;
@@ -122,17 +200,12 @@ input{
     align-items: center;
 }
 .choose__level{
-    display:flex;
+    display:none;
     flex-direction: column;
     align-items: center;
     gap: 3rem;
 }
-.level__fon{
-    background: url(./images/level__fon.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
+
 .choose__level  h1{
 text-transform: uppercase;
 color: #fff;
@@ -152,6 +225,7 @@ color: #fff;
     text-transform: uppercase;
     cursor: pointer;
 }
+
 .level div:hover{
     opacity: 0.8;
 }
@@ -209,4 +283,23 @@ border-radius: 12px;
 .none{
 
     display: none;
+}
+
+
+
+.start-game{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    height: 20rem;
+    background: #62ed06;
+    box-shadow: rgb(65, 112, 53) 0px 20px 30px -10px;
+    padding: 1rem;
+    border-radius: 50%;
+    font-size: 3rem;
+}
+
+.red{
+    background: #eb2222;
 }
