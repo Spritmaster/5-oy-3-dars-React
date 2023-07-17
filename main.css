@@ -112,10 +112,7 @@ input{
     margin: 2rem 0;
 }
 
-.input-box input:focus~label, 
-.input-box  input:valid~label{
-    top: -5px;
-}
+
 
 .input-box label{
     position: absolute;
@@ -127,7 +124,12 @@ input{
     pointer-events: none;
     transform: .5s;
 }
-
+.input-box input:focus~label{
+    top: -5px;
+}
+.input-box input:valid~label{
+    top: -5px;
+}
 
 .input-box input{
     width: 100%;

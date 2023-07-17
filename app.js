@@ -106,7 +106,6 @@ const game=()=>{
             saund.pause()
             input.focus()
             fon.className="play-fon"
-            console.log("Salom");
             limitTime()
             closeWindow(start_game)
             clearInterval(begintime)
@@ -170,8 +169,6 @@ function limitTime(){
           }
       }, 1000);
   }
-let hi= localStorage.getItem("users",JSON.parse(users))
-console.log(hi);
   
 function bg_change(n){
     if(n==4){
